@@ -1,0 +1,9 @@
+function binaryAgent(str) {
+  let c=''
+  
+  for(let i of str.split(' ')){ 
+    c+=String.fromCharCode(parseInt(i,2))
+  }
+  return c;
+}
+

@@ -1,0 +1,9 @@
+function steamrollArray(...arr) {
+  // I'm a steamroller, baby
+
+
+
+  return arr.flat(5)
+}
+
+steamrollArray(([[["a"]], [["b"]]]))

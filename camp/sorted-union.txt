@@ -1,0 +1,13 @@
+function uniteUnique(...arr) {
+  let brr=[]
+let d=(arr.reduce((a,b)=>a.concat(b)))
+  for (let i of d){
+    if (!(i in brr)){
+      brr.push(i)
+    }
+  }
+return (brr)
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+ 

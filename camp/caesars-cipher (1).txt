@@ -1,0 +1,21 @@
+function rot13(str) { // LBH QVQ VG!
+//console.log(String.fromCharCode(65))
+//console.log('*'.charCodeAt(0))
+let b=[]
+let d=(str.split(' '))
+function nos(arr){
+  let f=''
+  for (let i of arr){
+    b=[]
+    for(let i of i.split('')){
+      let a=i.charCodeAt(0)
+      b.push((a>=78?a-13:a>=65?a+13:a))
+    }
+  f+=String.fromCharCode(...b)+' '
+  }
+  return f
+  }
+return( nos(d).trim())
+}
+// Change the inputs below to 
+rot13("SERR CVMMN!")

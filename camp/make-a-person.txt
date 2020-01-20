@@ -1,0 +1,26 @@
+var Person = function(a) {
+  // Complete the method below and implement the others similarly
+  this.getFullName = function() {
+    return a;
+  };
+this.getFirstName=function(){
+  return a.split(' ')[0]
+}
+this.getLastName=function(){
+  return a.split(' ')[1]
+}
+this.setFirstName=function(f){
+  return a= a.replace(a.split(' ')[0],f)
+}
+this.setLastName=function(f){
+  return a= a.replace(a.split(' ')[1],f)
+}
+this.setFullName=function(f){
+  return a= f
+}
+  return a;
+};
+
+var bob = new Person('Bob Ross');
+
+console.log(bob.getFullName())

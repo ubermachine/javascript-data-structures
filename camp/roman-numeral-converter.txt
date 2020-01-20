@@ -1,0 +1,71 @@
+function convertToRoman(num) {
+let t=num
+let f=''
+loop: while( t>0 ) { 
+switch(true){
+    case (t>=1000):
+    f+='M'
+    t-=1000
+    continue loop
+    case (t<=1000&&t>=900):
+    f+='CM'
+    t-=900
+    continue loop
+    case (t>=500):
+   
+    f+='D'
+    t-=500
+    continue loop
+    case (t<=500&&t>=400):
+    f+='CD'
+    t-=400
+    continue loop
+
+    case (t>=100):
+    f+='C'
+    t-=100
+    continue loop
+
+    case (t<=100&&t>=90):
+    f+='XC'
+    t-=90
+    continue loop
+ 
+    case (t>=50):
+    f+='L'
+    t-=50
+    continue loop
+
+    case (t<=50&&t>=40):
+
+    f+='XL'
+    t-=40  
+    continue loop
+    case (t>=10):
+    f+='X'
+    t-=10
+    continue loop
+    case (t==9):
+    f+='IX'
+    t-=9
+    continue loop
+    case (t>=5):
+    f+='V'
+    t-=5
+    continue loop
+    case (t==4):
+    f+='IV'
+    t-=4
+    continue loop  
+    case (t<=3):
+    f+='I'
+    t-=1
+    continue loop
+
+}
+}
+console.log(f)
+ return f
+}
+
+convertToRoman(36);

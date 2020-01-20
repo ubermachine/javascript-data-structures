@@ -1,0 +1,24 @@
+function pairElement(str) {
+  let brr=[]
+  for (let i of str.split('')){
+    if(i=='A'){
+      brr.push([i,'T'])
+
+    }else if (i=='C'){
+      brr.push([i,'G'])
+
+    }
+    else if (i=='T'){
+      brr.push([i,'A'])
+
+    }else if (i=='G'){
+      brr.push([i,'C'])
+
+    }
+    
+    
+  }console.log(brr)
+  return brr;
+}
+
+pairElement("GCG");

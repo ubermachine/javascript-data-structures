@@ -1,0 +1,11 @@
+function myReplace(str, b, a) {
+  
+ if(b[0]==b[0].toLowerCase()){
+ a=a[0].toLowerCase()+a.slice(1)
+ }else{
+    a=a[0].toUpperCase()+a.slice(1)
+ }
+return (str.replace(b,a));
+}
+
+myReplace("Let us go to the store", "Store", "mall");

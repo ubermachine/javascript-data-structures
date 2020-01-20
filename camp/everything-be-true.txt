@@ -1,0 +1,6 @@
+function truthCheck(collection, pre) {
+
+  return( collection.every(a=>a.hasOwnProperty(pre)&& a[pre]));
+}
+ 
+truthCheck([{"single": "double"}, {"single": undefined}], "single")

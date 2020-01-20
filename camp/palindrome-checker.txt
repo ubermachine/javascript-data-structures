@@ -1,0 +1,12 @@
+function palindrome(str) {
+
+  let d=(str.toLowerCase().match(/[a-z]|[1-9]/g))
+  if(!d){
+    return true
+  }
+  return d.toString()===d.reverse().toString();
+}
+
+
+
+palindrome("0_0 (: /-\ :) 0-0");

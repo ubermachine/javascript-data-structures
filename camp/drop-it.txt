@@ -1,0 +1,15 @@
+function dropElements(arr, func) {
+  // Drop them elements.
+ let brr=[...arr]
+ let i=0
+while(!func(arr[i]) && i<arr.length){
+brr.shift()
+i+=1
+
+}
+
+console.log(brr)
+  return brr;
+}
+
+dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})

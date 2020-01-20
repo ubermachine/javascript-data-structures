@@ -1,0 +1,12 @@
+function fearNotLetter(str) {
+  let c='abcdefghijklmnopqrstuvwxyz'
+let d =new RegExp(str)
+ let a=c.indexOf(str[0])
+ let b=c.indexOf(str[str.length-1])
+ let f=c.slice(a,b+1)
+ for (let i of f){
+   if(!str.includes(i))
+ return i
+}
+}
+fearNotLetter("abce");

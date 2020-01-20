@@ -1,0 +1,14 @@
+function whatIsInAName(c, s) {
+let brr=[]
+var k = Object.keys(s);
+return (c.filter(a=>{
+  for(let i=0;i<k.length;i++){
+    
+  if (!a.hasOwnProperty(k[i])|| a[k[i]]!==s[k[i]]){
+      return false
+     
+  }}return true
+  }))
+  
+}
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 })

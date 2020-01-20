@@ -1,0 +1,60 @@
+function checkCashRegister(price, cash, cid) {
+  var changee=cash-price;
+  let t=cash-price;
+let r= JSON.parse(JSON.stringify(cid));
+let mm=[]
+let sum=0 
+  let a= [["PENNY", 0.01],
+ ["NICKEL", 0.05],
+ ["DIME", 0.1],
+["QUARTER", 0.25],
+ ["ONE", 1],
+ ["FIVE", 5],
+ ["TEN", 10],
+ ["TWENTY", 20],
+ ["ONE HUNDRED", 100]]
+ let y=[]
+ let yada=0
+let ld=r.map(a=>(a[1]=0))
+for(let i=a.length-1;i>=0;i--){
+  
+  while((t)>=a[i][1]&&cid[i][1]>0&&a[i][1]>=0.01)
+  {
+    if(changee-cid[i][1]==0){sum+=(cid[i][1])
+    yada=1;
+    t-=cid[i][1];
+    break;
+}else{
+    r[i][1]+=(a[i][1]);
+    t-=a[i][1];
+    t=parseFloat(t).toFixed(2)   ;
+   cid[i][1]-=a[i][1];
+   sum+=(a[i][1]);
+   if(!mm.includes(r[i])){
+      mm.push(r[i]);
+      }
+      if(t==0){
+        break;
+      }
+      }
+  } 
+} 
+let more=mm.filter((a)=>a[1]>=0);
+let fferror=more.map(a=>parseFloat(a[1]=parseFloat(a[1])).toFixed(1));
+let myObj = {
+    status : "OPEN",
+    change : more,  
+};
+sum=parseFloat(sum).toFixed(2);
+  if(sum<changee){
+    myObj.status="INSUFFICIENT_FUNDS";
+    myObj.change=[];
+  }else if(yada==1){
+    myObj.status="CLOSED";
+    myObj.change=cid;
+  }
+  return(myObj);
+}
+
+
+checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])

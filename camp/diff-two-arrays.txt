@@ -1,0 +1,8 @@
+function diffArray(a, b) {
+  
+let c=a.filter(k=>!b.includes(k))
+let d=b.filter(k=>!a.includes(k))
+
+return(c.concat(d))
+}
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
